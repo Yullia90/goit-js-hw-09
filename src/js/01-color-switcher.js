@@ -26,8 +26,8 @@ startBtn.addEventListener('click', () => {
 });
 
 stopBtn.addEventListener('click', () => {
-  startBtn.disabled = false;
   stopBtn.disabled = true;
+  startBtn.disabled = false;
   clearInterval(timerId);
 });
 
