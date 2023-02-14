@@ -21,16 +21,22 @@ startBtn.addEventListener('click', () => {
     let i = getRandomHexColor();
     bgColor.style.backgroundColor = i;
   }, 1000);
-  startBtn.disabled = true;
-  stopBtn.disabled = false;
+  onClickBtnStart();
 });
 
 stopBtn.addEventListener('click', () => {
-  stopBtn.disabled = true;
-  startBtn.disabled = false;
+  onClickBtnStop();
   clearInterval(timerId);
 });
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+function onClickBtnStart() {
+  startBtn.disabled = true;
+  stopBtn.disabled = false;
+}
+function onClickBtnStop() {
+  stopBtn.disabled = true;
+  startBtn.disabled = false;
 }
